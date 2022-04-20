@@ -9,6 +9,20 @@
     sudo apt-get update
     sudo apt-get install ansible
     ```
+* Ansible-lint
+    * install pip3
+    ```shell
+    sudo apt install python3-pip
+    ```
+    * install Ansible-lint
+    ```shell
+    pip3 install "ansible-lint"
+    ```
+    * add Path
+    * Usage
+    ```shell
+    ansible-lint {name}.yml
+    ```
 ## Ansible Playbook?
 ---
 * ex.
