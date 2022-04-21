@@ -48,3 +48,38 @@ docker-compose up -d
           debug: 
             msg: "{{ message  }}"
     ```
+## Usage
+---
+* roles
+```shell
+mkdir -p ./roles/{tasks_name}/tasls/main.yml
+```
+    ex. main.yml
+
+    ```yml
+    - name: Install curl
+    apt:
+        name: curl
+        # apt update
+        update_cache: yes
+    ```
+
+    ex. playbook.yml
+    ```yml
+    - hosts: server
+        roles:
+            - { role: curl, become: yes }
+    ```
+
+* ansible.cfg
+```shell
+touch ./ansible.cfg
+```
+
+    ex. ansible.cfg
+    ```
+    [defaults]
+    roles_path = ./roles
+    inventory = ./inventory
+    private_key_file = ./private_key
+    ```
