@@ -56,16 +56,14 @@ mkdir -p ./roles/{tasks_name}/tasks && touch ./roles/{tasks_name}/tasks/main.yml
 ```
 
 
-    * main.yml
-
-
-    ```yaml
-    - name: Install curl
-    apt:
-        name: curl
-        # apt update
-        update_cache: yes
-    ```
+* main.yml
+```yaml
+- name: Install curl
+  apt:
+    name: curl
+    # apt update
+    update_cache: yes
+```
 
 
     * playbook.yml
