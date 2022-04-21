@@ -56,7 +56,7 @@ mkdir -p ./roles/{tasks_name}/tasks && touch ./roles/{tasks_name}/tasks/main.yml
 ```
 
 
-* main.yml
+* ex.main.yml
 ```yaml
 - name: Install curl
   apt:
@@ -65,15 +65,12 @@ mkdir -p ./roles/{tasks_name}/tasks && touch ./roles/{tasks_name}/tasks/main.yml
     update_cache: yes
 ```
 
-
-    * playbook.yml
-
-
-    ```yaml
-    - hosts: server
-        roles:
-            - { role: curl, become: yes }
-    ```
+* ex.playbook.yml
+```yaml
+- hosts: server
+    roles:
+      - { role: curl, become: yes }
+```
 
 
 * ansible.cfg
@@ -81,12 +78,10 @@ mkdir -p ./roles/{tasks_name}/tasks && touch ./roles/{tasks_name}/tasks/main.yml
 touch ./ansible.cfg
 ```
 
-    * ansible.cfg  
-
-
-    ```
-    [defaults]
-    roles_path = ./roles
-    inventory = ./inventory
-    private_key_file = ./private_key
-    ```
+* ex.ansible.cfg  
+```
+[defaults]
+roles_path = ./roles
+inventory = ./inventory
+private_key_file = ./private_key
+```
