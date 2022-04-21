@@ -54,6 +54,7 @@ docker-compose up -d
 ```shell
 mkdir -p ./roles/{tasks_name}/tasks && touch ./roles/{tasks_name}/tasks/main.yml
 ```
+
     - ex. main.yml
     ```yaml
     - name: Install curl
