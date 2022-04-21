@@ -55,7 +55,7 @@ docker-compose up -d
 mkdir -p ./roles/{tasks_name}/tasks && touch ./roles/{tasks_name}/tasks/main.yml
 ```
 
-    - ex. main.yml
+    - ex-main.yml
     ```yaml
     - name: Install curl
     apt:
@@ -64,7 +64,7 @@ mkdir -p ./roles/{tasks_name}/tasks && touch ./roles/{tasks_name}/tasks/main.yml
         update_cache: yes
     ```
 
-    - ex. playbook.yml
+    - ex-playbook.yml
     ```yaml
     - hosts: server
         roles:
@@ -76,7 +76,7 @@ mkdir -p ./roles/{tasks_name}/tasks && touch ./roles/{tasks_name}/tasks/main.yml
 touch ./ansible.cfg
 ```
 
-    ex. ansible.cfg
+    - ex-ansible.cfg  
     ```
     [defaults]
     roles_path = ./roles
