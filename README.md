@@ -35,7 +35,7 @@ docker-compose up -d
 ---
 * ex.
     - Create playbook.yml
-    ```yml
+    ```yaml
     - hosts: server
       tasks: 
         # task 1
@@ -56,7 +56,7 @@ mkdir -p ./roles/{tasks_name}/tasks && touch ./roles/{tasks_name}/tasks/main.yml
 ```
     ex. main.yml
 
-    ```yml
+    ```yaml
     - name: Install curl
     apt:
         name: curl
@@ -65,7 +65,7 @@ mkdir -p ./roles/{tasks_name}/tasks && touch ./roles/{tasks_name}/tasks/main.yml
     ```
 
     ex. playbook.yml
-    ```yml
+    ```yaml
     - hosts: server
         roles:
             - { role: curl, become: yes }
