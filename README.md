@@ -52,7 +52,7 @@ docker-compose up -d
 ---
 * roles
 ```shell
-mkdir -p ./roles/{tasks_name}/tasls/main.yml
+mkdir -p ./roles/{tasks_name}/tasks && touch ./roles/{tasks_name}/tasks/main.yml
 ```
     ex. main.yml
 
