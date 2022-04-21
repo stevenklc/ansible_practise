@@ -2,6 +2,7 @@
 
 ## Install
 ---
+### Ansible
 * Ubuntu
     ```shell
     sudo apt-get install software-properties-common
@@ -23,6 +24,13 @@
     ```shell
     ansible-lint {name}.yml
     ```
+### Jenkins
+* Run
+```shell
+docker-compose up -d
+```
+
+
 ## Ansible Playbook?
 ---
 * ex.
