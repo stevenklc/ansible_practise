@@ -1,0 +1,13 @@
+version: '3.2'
+services:
+    Jenkins:
+        container_name: Jenkins
+        image: jenkins/jenkins
+        user: root
+        volumes:
+            - ~/jenkins_home:/var/jenkins_home
+            - ~/jenkins_home/servers/identity/app:/srv/app
+            - /var/run/docker.sock:/var/run/docker.sock
+        ports:
+            - '8080:8080'
+            - '50000:50000'
