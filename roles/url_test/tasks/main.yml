@@ -1,0 +1,19 @@
+- name: Test Taiwan high speed rail URL
+  uri: 
+    url: "{{ item.url }}"
+  register: url_result
+  until: url_result.status == 200
+  retries: 5
+  delay: 10
+  with_items:
+    - { url: 'https://www.thsrc.com.tw' }
+
+- name: Test Taiwan high speed rail URL2
+  uri: 
+    url: "{{ item.url }}"
+  register: url_result
+  until: url_result.status == 200
+  retries: 5
+  delay: 10
+  with_items:
+    - { url: 'https://pms.thsrc.com.tw' }

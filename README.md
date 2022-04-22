@@ -111,3 +111,8 @@ private_key_file = ./private_key
     - { name: 'test1', groups: 'wheel' }
     - { name: 'test2', groups: 'root' }
 ```
+
+## Demo
+---
+* Test Taiwan HIGH SPEED RAIL URL\*2
+```sehll ansible-playbook playbook_rule_url.yml ```
