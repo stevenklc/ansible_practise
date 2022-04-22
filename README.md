@@ -116,5 +116,5 @@ private_key_file = ./private_key
 ---
 * Test Taiwan HIGH SPEED RAIL URL\*2  
 
-```sehll ansible-playbook playbook_rule_url.yml ```
+```shell ansible-playbook playbook_rule_url.yml ```
 
