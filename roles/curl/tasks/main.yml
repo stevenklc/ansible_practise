@@ -1,6 +1,13 @@
 
+- name: Check curl is already installed
+  command: curl --version
+  ignore_errors: yes
+  changed_when: false
+  register: curl_is_installed
+
 - name: Install curl
   apt: 
     name: curl
     update_cache: yes
+  when: curl_is_installed.rc != 0
 

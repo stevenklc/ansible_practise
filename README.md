@@ -30,6 +30,9 @@
 docker-compose up -d
 ```
 
+* docker voloume
+    * ```/var/jenkins_home```is Jenkins data
+
 
 ## Ansible Playbook?
 ---
@@ -84,4 +87,27 @@ touch ./ansible.cfg
 roles_path = ./roles
 inventory = ./inventory
 private_key_file = ./private_key
+```
+
+### loop
+* with_items and item
+```yml
+- name: XXX
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  with_items: 
+    - apt-transport-https
+    - ca-certificates
+```
+
+```yml
+- name: xxx
+  user: 
+    name: "{{ item.name }}"
+    state: present
+    groups: "{{ item.groups }}"
+  with_items:
+    - { name: 'test1', groups: 'wheel' }
+    - { name: 'test2', groups: 'root' }
 ```
